@@ -1,3 +1,3 @@
-FROM registry.access.redhat.com/openshift3/ose-haproxy-router
+FROM openshift/origin-docker-registry:latest
 
 ADD haproxy-config.template haproxy-config.template

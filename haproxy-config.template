@@ -196,6 +196,7 @@ backend be_http_{{$cfgIdx}}
                 {{ else }}
 backend be_edge_http_{{$cfgIdx}}
                 {{ end }}
+  mode http
   option redispatch
   option forwardfor
   balance leastconn
@@ -227,7 +228,6 @@ backend be_tcp_{{$cfgIdx}}
 
             {{ if eq $cfg.TLSTermination "reencrypt" }}
 backend be_secure_{{$cfgIdx}}
-  mode http
   option redispatch
   balance leastconn
   timeout check 5000ms
