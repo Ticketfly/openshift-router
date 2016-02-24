@@ -1,3 +1,3 @@
-FROM openshift/origin-docker-registry:latest
+FROM openshift/origin-haproxy-router:latest
 
 ADD haproxy-config.template haproxy-config.template
